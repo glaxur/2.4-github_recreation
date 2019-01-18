@@ -1,0 +1,51 @@
+.container{
+    margin:0;
+}
+ul{
+    list-style: none;
+    display: inline-block;
+}
+
+li{
+    display: inline-block;
+
+
+}
+div{
+    display: inline-block;
+    /*width:20%;*/
+    border: 2px dotted black;
+}
+
+body{
+    background-color: #74e83f;
+    width: 95%;
+    margin: 0 auto;
+}
+.left-nav{
+    display: inline-block;
+    /*width: 30%;*/
+}
+
+.right-nav{
+    display:inline-block;
+    float: right;
+}
+
+.dropdown1{
+    display: inline-block;
+    /*width: 100%;*/
+}
+.dropdown2{
+    display: inline-block;
+    /*width: 100%;*/
+    float: right;
+}
+
+.btn-dark{
+    display: inline-block;
+}
+
+.col-md-6{
+    float: right;
+}
