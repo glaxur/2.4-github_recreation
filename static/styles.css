@@ -1,34 +1,42 @@
-.container{
+.container-fluid{
     margin:0;
+    background-color: black;
 }
+
 ul{
     list-style: none;
     display: inline-block;
 }
 
-li{
+li {
     display: inline-block;
-
-
 }
+
+.left-ul{
+    width:70%;
+    padding-left:0;
+    margin-bottom: 0;
+}
+
+
 div{
     display: inline-block;
     /*width:20%;*/
-    border: 2px dotted black;
+    /*border: px solid black;*/
 }
 
 body{
-    background-color: #74e83f;
+    background-color: #ffffff;
     width: 95%;
     margin: 0 auto;
 }
 .left-nav{
     display: inline-block;
-    /*width: 30%;*/
+    width: 70%;
 }
 
 .right-nav{
-    display:inline-block;
+    display: inline-block;
     float: right;
 }
 
@@ -47,5 +55,61 @@ body{
 }
 
 .col-md-6{
+    margin: auto;
+    margin-right:0;
+
+}
+
+
+.header-search-input{
+    width:50%;
+    margin-right: 0;
+    padding-left:0;
+}
+
+.UnderLineNav {
+  background-color: #ffffff;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.UnderLineNav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.UnderLineNav a:hover {
+  border-bottom: 3px solid #cbcfd5;
+}
+
+.UnderLineNav a.active {
+  border-bottom: 3px solid #DF570C;
+}
+
+.btn-lg{
     float: right;
 }
+
+.ml-3 {
+    margin-left: 16px;
+}
+
+.picture-block{
+    border: 1px solid #cbcfd5;
+    /*font-size: 12px;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;*/
+}
+
+/* Style the links inside the navigation bar */
+#your-repos-filter{
+    display: inline-block;
+    width: 25%;
+}
+
+/* Style the links inside the navigation bar */
