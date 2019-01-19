@@ -1,0 +1,58 @@
+{#THIS PAGE IS GOING TO BE GOTTEN TO BY CLICKING FOLLOWERS TAB#}
+
+{#THIS IMPORTS ALL THE MAIN HTML FROM BASE HTML SO LAYOUT WILL LOAD ON THIS SEPERATE PAGE IN BROWSER#}
+{%extends "base.html"%}
+
+
+{#TEMPLATE TAG TO BUILD HTML#}
+
+
+{% block followers %}<ul class="list-group">
+{#    FOR LOOOP TO GO THROUGH EACH FOLLOWER IN LIST OF FOLLOWERS AND MAKES A ROW OF EACH FOLLOWER#}
+        {% for follower  in followers %}
+{#            CREATES A TABLE OF FOLLOWER NAMES WITH A LINKS TO UNFOLLOW#}
+
+            <table class="table">
+{#            TABLE BODY#}
+                <tbody>
+                    <tr>
+{#                    WRITE SOMETHING TO  USE INDEX +1 HERE, MAKES ROW NUMBER#}
+                      <th scope="row">ROW #</th>
+{#                        ADDS IMAGE, makes it a one column wide in this row#}
+                        <div class="d-table-cell col-1 v-align-top">
+{#                            MAKES THE IMAGE A LINK , FIGURE OUT HOW TO GET IMAGE IN HERE#}
+                            <a class="AVATAR" ><img src#></a>
+{#                            MAKES THIS COLUMN 9 WIDE OUT OF F12 AND ALIGNES IT TO THE TOP#}
+                         <div class="d-table-cell col-9 v-align-top">
+{#                             MAKES A CLICKABLE LINK ON FOLLOWERS NAME#}
+                            <a class="d-inline-block no-underline ">
+{#                                INSERT FOLLOWERS USERNAME#}
+                            <span class="f4 link-gray-dark"> ^^^^</span>
+                            <span class="link-gray ">mraines92</span>
+                            </a>
+
+                             <div class="text-gray text-small ">
+{#                                 INSERT BIO HERE#}
+
+                            <div> ^^^^^</div>
+                             </div>
+                             <p class="text-gray text-small mb-0">
+{#                             MAKE OCTICON WITH ORGANIZATION#}
+                                 <svg></svg>
+{#                             MAKE OCTICON WITH LOCATION#}
+                                <svg></svg>
+                             </p>
+
+{#                          UNFOLLOW BUTTON#}
+                          <div class=" d-table-cell col 2 v-align-top text right">
+                              <button class="btn-bt-sm js-toggler-target">UNFOLLOW</button>
+                          </div>
+                    </tr>
+
+
+{#            ENDS THIS TEMPLATE TAG FOR LOOP#}
+        {% endfor %}
+    </ul>
+{#    ENDS THIS TEMPLATE TAG SECTION#}
+
+{% endblock %}
