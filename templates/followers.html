@@ -7,8 +7,9 @@
 {#TEMPLATE TAG TO BUILD HTML#}
 
 
-{% block followers %}<ul class="list-group">
-{#    FOR LOOOP TO GO THROUGH EACH FOLLOWER IN LIST OF FOLLOWERS AND MAKES A ROW OF EACH FOLLOWER#}
+{% block info_followers %}
+    <ul class="list-group">
+{#    FOR LOOP TO GO THROUGH EACH FOLLOWER IN LIST OF FOLLOWERS AND MAKES A ROW OF EACH FOLLOWER#}
         {% for follower  in followers %}
 {#            CREATES A TABLE OF FOLLOWER NAMES WITH A LINKS TO UNFOLLOW#}
 
@@ -17,35 +18,41 @@
                 <tbody>
                     <tr>
 {#                    WRITE SOMETHING TO  USE INDEX +1 HERE, MAKES ROW NUMBER#}
-                      <th scope="row">ROW #</th>
+                      <th scope="row"></th>
 {#                        ADDS IMAGE, makes it a one column wide in this row#}
-                        <div class="d-table-cell col-1 v-align-top">
+
+                        <div class="d-table-cell col-3 v-align-top">
 {#                            MAKES THE IMAGE A LINK , FIGURE OUT HOW TO GET IMAGE IN HERE#}
-                            <a class="AVATAR" ><img src#></a>
+                            <a class="avatar-follower" ><img src="{{ follower.avatar_url }}" width="100px"
+                                                             height="100px">"{{ follower.avatar }}" </a>
+
 {#                            MAKES THIS COLUMN 9 WIDE OUT OF F12 AND ALIGNES IT TO THE TOP#}
                          <div class="d-table-cell col-9 v-align-top">
 {#                             MAKES A CLICKABLE LINK ON FOLLOWERS NAME#}
-                            <a class="d-inline-block no-underline ">
+
+                             <a class="d-inline-block no-underline " href="{{follower.name}}">"{{ follower.name }}" </a>
 {#                                INSERT FOLLOWERS USERNAME#}
-                            <span class="f4 link-gray-dark"> ^^^^</span>
-                            <span class="link-gray ">mraines92</span>
-                            </a>
+{#                             <span class="f4 link-gray-dark"</span>#}
 
-                             <div class="text-gray text-small ">
-{#                                 INSERT BIO HERE#}
+                            <a href="{{follower.login}}">{{ follower.login }}</a>
+                            <a> href="{{follower.email}}">{{ follower[email] }}</a>
+                         </div>
+                             <p class="link-gray "> {{ follower.location }} </p>
+                             <div class="text-gray text-small bio "> <a href="{{ follower.bio }}"> {{ follower.bio }}</a></div>
 
-                            <div> ^^^^^</div>
-                             </div>
-                             <p class="text-gray text-small mb-0">
-{#                             MAKE OCTICON WITH ORGANIZATION#}
-                                 <svg></svg>
+                          </div>
+{#                            <div> ^^^^^</div>#}
+{#                             </div>#}
+{#                             <p class="text-gray text-small mb-0">#}
+{#                             MAKE OCTICON WITH ORganization#}
+{#                                 <svg></svg>#}
 {#                             MAKE OCTICON WITH LOCATION#}
-                                <svg></svg>
-                             </p>
+{#                                <svg></svg>#}
+{#                             </p>#}
 
 {#                          UNFOLLOW BUTTON#}
-                          <div class=" d-table-cell col 2 v-align-top text right">
-                              <button class="btn-bt-sm js-toggler-target">UNFOLLOW</button>
+                          <div class=" d-table-cell col 2 v-align-top text-right ">
+                              <button class="btn-bt-sm js-toggler-target ">UNFOLLOW</button>
                           </div>
                     </tr>
 
@@ -56,3 +63,6 @@
 {#    ENDS THIS TEMPLATE TAG SECTION#}
 
 {% endblock %}
+
+{#<p>{{ follower.login }}</p>#}
+{#<p><img src="{{ follower.avatar_url }}" alt=""></p>#}

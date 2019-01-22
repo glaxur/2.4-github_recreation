@@ -25,25 +25,38 @@ div{
     /*border: px solid black;*/
 }
 
+
+.header-search-input{
+   width:35%;
+   display: inline-block;
+}
+
+
 body{
     background-color: #ffffff;
     width: 95%;
     margin: 0 auto;
 }
+
+
 .left-nav{
     display: inline-block;
     width: 70%;
 }
+
 
 .right-nav{
     display: inline-block;
     float: right;
 }
 
+
 .dropdown1{
     display: inline-block;
     /*width: 100%;*/
 }
+
+
 .dropdown2{
     display: inline-block;
     /*width: 100%;*/
@@ -106,10 +119,14 @@ body{
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;*/
 }
 
+.avatar-follower{
+    width: 100px;
+    height:100px;
+}
+
+
 /* Style the links inside the navigation bar */
 #your-repos-filter{
     display: inline-block;
     width: 48%;
 }
-
-/* Style the links inside the navigation bar */

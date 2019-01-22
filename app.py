@@ -30,7 +30,7 @@ def index():
 
     # create a dictionary and assign it a key of repos and a value of the info from second api
     context = {
-        'repos': data2, 'general': data #also assign it another key of general and value of repos info
+        'repos': data2, 'general': data #also assign it another key of general and value of repos info, repos and general are the keys and data2, data are the values.
     }
 
     print(type(context["repos"]))
