@@ -10,6 +10,8 @@ from flask import render_template
 
 import requests
 
+
+
 #load all the packages
 app = Flask(__name__)   #load all the packages ??? where does it look for packages
 
@@ -54,17 +56,24 @@ def index():
 @app.route('/followers/', methods=["GET"])
 
 def following_people():
-    response = requests.get("https://api.github.com/users/glaxur/followers")
+    response = requests.get("https://api.github.com/users/glaxur/followers" )
     data_followers = response.json()
 
+    specific_user_data = []
+    for user in data_followers:
+        # user_url is a list
+        user_url = user.get('url')
+
+        response2 = requests.get(user_url, )
+        u_data = response2.json()
+
+
+        specific_user_data.append(u_data)
+
     info_followers = {
-        "followers" : data_followers}
 
-    print(data_followers)
+        "followers": specific_user_data}
 
-
-    #unpacks the info in the api (which was translated from json and store in a dctionary, into the followers.html
-    #template file. render_template is a jinja2 method
     return render_template('followers.html', **info_followers)
 
 #
